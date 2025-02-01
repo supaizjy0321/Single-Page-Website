@@ -1,0 +1,101 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+nav a.active {
+    text-decoration: underline;
+    color: yellow;
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 4rem 2rem 2rem;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 4rem;
+}
+
+/* Form Styling */
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Animation */
+@keyframes slide {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+h1 {
+    animation: slide 1s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 0.5rem;
+    }
+    
+    section {
+        padding: 5rem 1rem 2rem;
+    }
+}
